@@ -1,0 +1,37 @@
+.home-slider{
+    width: calc(100vw - 3rem);
+    height: calc(100vh - 6rem);
+	&__slide {
+		width: calc(100vw - 3rem);
+		height: calc(100vh - 6rem);
+		filter: hue-rotate(-120deg);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		position: relative;
+		&-content {
+			position: absolute;
+		    top: 50%;
+		    left: 1rem;
+		    color: #fff;
+		    z-index: 5;
+		}
+	}
+	&__buttons {
+		position: absolute;
+		@include rem-fallback(bottom, 3);
+		@include rem-fallback(left, 4);
+		z-index: 2;
+		button {
+			padding: 0;
+			margin: 0;
+			background: transparent;
+			color: $white;
+			outline: none;
+			@include rem-fallback(font-size, 4);
+			&:first-child {
+				@include rem-fallback(margin-right, 2);
+			}
+		}
+	}
+}
